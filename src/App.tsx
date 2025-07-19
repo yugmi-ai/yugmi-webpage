@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, Play, Calendar, Brain, Smartphone, Layers, Building, Zap, MapPin, Factory, Home, Car } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 // Floating Stars Component
 const FloatingStars = () => {
@@ -38,22 +39,25 @@ const Navigation = ({ currentPage, setCurrentPage }: { currentPage: string; setC
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+            <img
+              src="/yugmi.png"
+              alt="Yugmi Logo"
+              className="w-10 h-10 object-contain"
+            />
+            <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+              Yugmi
             </div>
-            <span className="text-xl font-bold text-white">Yugmi</span>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => setCurrentPage(item.id)}
-                className={`text-sm font-medium transition-colors ${
-                  currentPage === item.id 
-                    ? 'text-[#F67B27]' 
-                    : 'text-gray-300 hover:text-white'
-                }`}
+                className={`text-sm font-medium transition-colors ${currentPage === item.id
+                  ? 'text-[#F67B27]'
+                  : 'text-gray-300 hover:text-white'
+                  }`}
               >
                 {item.label}
               </button>
@@ -82,11 +86,10 @@ const Navigation = ({ currentPage, setCurrentPage }: { currentPage: string; setC
                   setCurrentPage(item.id);
                   setIsMenuOpen(false);
                 }}
-                className={`block w-full text-left py-2 text-sm font-medium transition-colors ${
-                  currentPage === item.id 
-                    ? 'text-[#F67B27]' 
-                    : 'text-gray-300 hover:text-white'
-                }`}
+                className={`block w-full text-left py-2 text-sm font-medium transition-colors ${currentPage === item.id
+                  ? 'text-[#F67B27]'
+                  : 'text-gray-300 hover:text-white'
+                  }`}
               >
                 {item.label}
               </button>
@@ -147,7 +150,7 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-        
+
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#6F2B7F]/10 rounded-full blur-3xl animate-pulse"></div>
@@ -238,7 +241,7 @@ const Homepage = () => {
             <p>Each asset gets a learning brain using advanced VLM/LLM technology.</p>
             <p>Creating autonomous insights, intelligent decisions, and continuous feedback loops.</p>
           </div>
-          
+
           {/* Digital Twin Process */}
           <div className="grid md:grid-cols-4 gap-4 mt-16">
             {[
@@ -365,11 +368,10 @@ const ProductsPage = () => {
               <button
                 key={key}
                 onClick={() => setSelectedProduct(key)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                  selectedProduct === key
-                    ? 'bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white'
-                    : 'bg-gray-900/50 text-gray-300 hover:text-white border border-[#6F2B7F]/20'
-                }`}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all ${selectedProduct === key
+                  ? 'bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white'
+                  : 'bg-gray-900/50 text-gray-300 hover:text-white border border-[#6F2B7F]/20'
+                  }`}
               >
                 {product.title}
               </button>
@@ -435,9 +437,13 @@ const ProductsPage = () => {
 
           {/* CTA */}
           <div className="text-center mt-16">
-            <button className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all mr-4">
+            <button
+              className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all mr-4"
+              
+            >
               Book Demo
             </button>
+
             <button className="border border-[#C93A60] text-[#F67B27] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#C93A60]/10 transition-all">
               Try the App
             </button>
@@ -466,7 +472,7 @@ const ApplicationsPage = () => {
       benefits: ['45% faster project delivery', '30% cost reduction', '85% fewer safety incidents']
     },
     transportation: {
-      title: 'Transportation',
+      title: 'Bridges & Infrastructure',
       icon: <Car className="w-8 h-8" />,
       description: 'Intelligent transportation infrastructure that adapts, learns, and optimizes for maximum efficiency and safety.',
       applications: [
@@ -549,11 +555,10 @@ const ApplicationsPage = () => {
               <button
                 key={key}
                 onClick={() => setSelectedIndustry(key)}
-                className={`p-4 rounded-xl font-semibold transition-all text-center ${
-                  selectedIndustry === key
-                    ? 'bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white scale-105'
-                    : 'bg-gray-900/50 text-gray-300 hover:text-white border border-[#6F2B7F]/20 hover:border-[#C93A60]/40'
-                }`}
+                className={`p-4 rounded-xl font-semibold transition-all text-center ${selectedIndustry === key
+                  ? 'bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white scale-105'
+                  : 'bg-gray-900/50 text-gray-300 hover:text-white border border-[#6F2B7F]/20 hover:border-[#C93A60]/40'
+                  }`}
               >
                 <div className="flex justify-center mb-2">
                   {industry.icon}
@@ -573,7 +578,7 @@ const ApplicationsPage = () => {
                 {industries[selectedIndustry as keyof typeof industries].title}
               </h2>
             </div>
-            
+
             <p className="text-xl text-gray-300 mb-8">
               {industries[selectedIndustry as keyof typeof industries].description}
             </p>
@@ -590,7 +595,7 @@ const ApplicationsPage = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Impact & Benefits</h3>
                 <div className="space-y-3">
@@ -638,7 +643,7 @@ const AboutPage = () => {
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
             <p className="text-xl text-gray-300 leading-relaxed">
-              To create living digital twins that think, learn, and evolve with critical infrastructure, 
+              To create living digital twins that think, learn, and evolve with critical infrastructure,
               making our built environment smarter, safer, and more sustainable for future generations.
             </p>
           </div>
@@ -647,8 +652,8 @@ const AboutPage = () => {
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
             <p className="text-xl text-gray-300 leading-relaxed">
-              A future where every piece of infrastructure has its own intelligent digital twin, 
-              creating a network of connected, self-aware systems that continuously optimize 
+              A future where every piece of infrastructure has its own intelligent digital twin,
+              creating a network of connected, self-aware systems that continuously optimize
               performance, predict needs, and adapt to changing conditions.
             </p>
           </div>
@@ -715,8 +720,27 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+
+    emailjs.send(
+      'service_i8ql1r2',        // Replace with your EmailJS service ID
+      'template_lni995i',       // Replace with your EmailJS template ID
+      {
+        from_name: formData.name,
+        reply_to: formData.email,
+        company: formData.organization,
+        message: formData.message,
+      },
+      'TIGthDp3ink4ImDAE'         // Replace with your EmailJS public key
+    ).then(
+      () => {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', organization: '', message: '' });
+      },
+      (error) => {
+        console.error('EmailJS error:', error);
+        alert('Failed to send message. Please try again.');
+      }
+    );
   };
 
   return (
@@ -745,7 +769,7 @@ const ContactPage = () => {
                   <input
                     type="text"
                     value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-[#6F2B7F]/30 rounded-lg text-white placeholder-gray-400 focus:border-[#C93A60] focus:outline-none transition-colors"
                     placeholder="Your full name"
                     required
@@ -756,7 +780,7 @@ const ContactPage = () => {
                   <input
                     type="email"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-[#6F2B7F]/30 rounded-lg text-white placeholder-gray-400 focus:border-[#C93A60] focus:outline-none transition-colors"
                     placeholder="your@email.com"
                     required
@@ -767,7 +791,7 @@ const ContactPage = () => {
                   <input
                     type="text"
                     value={formData.organization}
-                    onChange={(e) => setFormData({...formData, organization: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-[#6F2B7F]/30 rounded-lg text-white placeholder-gray-400 focus:border-[#C93A60] focus:outline-none transition-colors"
                     placeholder="Your company or organization"
                   />
@@ -776,7 +800,7 @@ const ContactPage = () => {
                   <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                   <textarea
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={4}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-[#6F2B7F]/30 rounded-lg text-white placeholder-gray-400 focus:border-[#C93A60] focus:outline-none transition-colors resize-none"
                     placeholder="Tell us about your project and how we can help..."
@@ -799,15 +823,15 @@ const ContactPage = () => {
                 <div className="space-y-4 text-gray-300">
                   <div>
                     <strong className="text-[#F67B27]">Email:</strong><br />
-                    hello@yugmi.com
+                    sales@yugmi.com
                   </div>
                   <div>
                     <strong className="text-[#F67B27]">Phone:</strong><br />
-                    +1 (555) 123-4567
+                    +91-9220320044
                   </div>
                   <div>
                     <strong className="text-[#F67B27]">Headquarters:</strong><br />
-                    San Francisco, CA
+                    Noida UP, India
                   </div>
                 </div>
               </div>
@@ -866,23 +890,27 @@ function App() {
       <main className="relative z-10">
         {renderPage()}
       </main>
-      
+
       {/* Footer */}
       <footer className="border-t border-[#6F2B7F]/20 py-12 px-4 mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] rounded-lg flex items-center justify-center">
-                  <Brain className="w-5 h-5 text-white" />
+                <img
+                  src="/yugmi.png"
+                  alt="Yugmi Logo"
+                  className="w-10 h-10 object-contain"
+                />
+                <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+                  Yugmi
                 </div>
-                <span className="text-xl font-bold text-white">Yugmi</span>
               </div>
               <p className="text-gray-400">
                 Living digital twins for smarter infrastructure
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-semibold text-white mb-4">Products</h4>
               <div className="space-y-2 text-gray-400">
@@ -891,17 +919,17 @@ function App() {
                 <div>Yugmi XR</div>
               </div>
             </div>
-            
+
             <div>
-              <h4 className="font-semibold text-white mb-4">Industries</h4>
+              <h4 className="font-semibold text-white mb-4">Applications</h4>
               <div className="space-y-2 text-gray-400">
                 <div>Construction</div>
-                <div>Transportation</div>
+                <div>Bridge & Infrastructure</div>
                 <div>Energy</div>
                 <div>Smart Cities</div>
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-semibold text-white mb-4">Company</h4>
               <div className="space-y-2 text-gray-400">
@@ -912,7 +940,7 @@ function App() {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-[#6F2B7F]/20 mt-12 pt-8 text-center text-gray-400">
             <p>&copy; 2025 Yugmi. All rights reserved.</p>
           </div>

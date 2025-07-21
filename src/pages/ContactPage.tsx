@@ -116,10 +116,10 @@ const ContactPage = () => {
                     <strong className="text-[#F67B27]">Email:</strong><br />
                     sales@yugmi.com
                   </div>
-                  <div>
+                  {/* <div>
                     <strong className="text-[#F67B27]">Phone:</strong><br />
                     +91-9220320044
-                  </div>
+                  </div> */}
                   <div>
                     <strong className="text-[#F67B27]">Headquarters:</strong><br />
                     Noida, UP, India
@@ -141,9 +141,17 @@ const ContactPage = () => {
                 <p className="text-gray-300 mb-4">
                   See Yugmi's digital twin technology in action
                 </p>
-                <button className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#E55C3B] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
+                {/* <button className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#E55C3B] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
                   Schedule Live Demo
-                </button>
+                </button> */}
+                <a
+                  href="https://calendly.com/yugmi-ai/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#E55C3B] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all"
+                >
+                  Schedule Live Demo
+                </a>
               </div>
             </div>
           </div>

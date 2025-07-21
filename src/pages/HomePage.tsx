@@ -24,7 +24,7 @@ const HomePage = () => {
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Watch Demo
             </button>
-            <Link 
+            <Link
               to="/contact"
               className="border border-[#C93A60] text-[#F67B27] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#C93A60]/10 transition-all flex items-center justify-center gap-2"
             >
@@ -96,8 +96,8 @@ const HomePage = () => {
                 desc: 'Immersive AR/VR digital twin experiences for infrastructure visualization, remote inspection, and collaborative planning'
               }
             ].map((product, idx) => (
-              <Link 
-                key={idx} 
+              <Link
+                key={idx}
                 to="/products"
                 className="group p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20 hover:border-[#C93A60]/40 transition-all cursor-pointer hover:scale-105"
               >
@@ -181,18 +181,20 @@ const HomePage = () => {
             Together
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
+            <a
+              href="https://calendly.com/yugmi-ai/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all"
             >
               Talk to Experts
-            </Link>
-            <Link 
+            </a>
+            {/* <Link 
               to="/contact"
               className="border border-[#C93A60] text-[#F67B27] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#C93A60]/10 transition-all"
             >
               Get a Live Demo
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

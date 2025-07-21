@@ -130,14 +130,14 @@ const Homepage = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0F0F0F] via-[#6F2B7F]/10 to-[#0F0F0F]"></div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" itemProp="headline">
             Living Digital Twins for{' '}
             <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
               Smarter Infrastructure
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            AI-powered systems that think, remember, and evolve with your assets
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto" itemProp="description">
+            AI-powered digital twin technology for construction monitoring, infrastructure inspection, and predictive maintenance using advanced LLM and VLM AI agents
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 group">
@@ -161,7 +161,7 @@ const Homepage = () => {
       {/* Problem Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16" itemProp="headline">
             Why Infrastructure Needs to{' '}
             <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
               Evolve
@@ -169,10 +169,10 @@ const Homepage = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { stat: '30%', desc: 'Project delays from inefficient planning' },
-              { stat: 'Billions', desc: 'Lost in reactive maintenance' },
-              { stat: 'Zero', desc: 'Memory in disconnected systems' },
-              { stat: 'Rising', desc: 'Safety risks from blind spots' }
+              { stat: '30%', desc: 'Construction project delays from inefficient monitoring' },
+              { stat: 'Billions', desc: 'Lost in reactive infrastructure maintenance' },
+              { stat: 'Zero', desc: 'Memory in disconnected inspection systems' },
+              { stat: 'Rising', desc: 'Safety risks from manual monitoring blind spots' }
             ].map((item, idx) => (
               <div key={idx} className="text-center p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20 hover:border-[#C93A60]/40 transition-all">
                 <div className="text-3xl font-bold text-[#F67B27] mb-2">{item.stat}</div>
@@ -186,7 +186,7 @@ const Homepage = () => {
       {/* Ecosystem Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16" itemProp="headline">
             The Yugmi Product{' '}
             <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
               Ecosystem
@@ -197,20 +197,20 @@ const Homepage = () => {
               {
                 icon: <Brain className="w-12 h-12 text-[#6F2B7F]" />,
                 title: 'Yugmi.ai',
-                subtitle: 'AI Agent Framework',
-                desc: 'Intelligent reasoning engines that learn from your infrastructure data'
+                subtitle: 'LLM & VLM AI Agent Framework',
+                desc: 'Advanced AI agents using Large Language Models and Vision Language Models for intelligent infrastructure analysis and predictive maintenance'
               },
               {
                 icon: <Smartphone className="w-12 h-12 text-[#E55C3B]" />,
                 title: 'Yugmi Sense',
-                subtitle: 'Mobile Data Capture',
-                desc: 'Real-time field data collection with AR-enhanced interfaces'
+                subtitle: 'Mobile Construction Monitoring',
+                desc: 'Real-time construction progress monitoring and automated defect detection with AR-enhanced field inspection tools'
               },
               {
                 icon: <Layers className="w-12 h-12 text-[#F67B27]" />,
                 title: 'Yugmi XR',
-                subtitle: 'Immersive Experience Layer',
-                desc: 'Extended reality interfaces for digital twin visualization'
+                subtitle: 'Digital Twin Visualization',
+                desc: 'Immersive AR/VR digital twin experiences for infrastructure visualization, remote inspection, and collaborative planning'
               }
             ].map((product, idx) => (
               <div key={idx} className="group p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20 hover:border-[#C93A60]/40 transition-all cursor-pointer hover:scale-105">
@@ -230,16 +230,16 @@ const Homepage = () => {
       {/* Vision Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8" itemProp="headline">
             A Brain for Every{' '}
             <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
               Infrastructure
             </span>
           </h2>
           <div className="space-y-6 text-xl text-gray-300 mb-12">
-            <p>Yugmi builds multimodal digital twins that understand your infrastructure like never before.</p>
-            <p>Each asset gets a learning brain using advanced VLM/LLM technology.</p>
-            <p>Creating autonomous insights, intelligent decisions, and continuous feedback loops.</p>
+            <p>Yugmi builds multimodal digital twins with AI agents that understand construction progress, infrastructure health, and maintenance needs like never before.</p>
+            <p>Each asset gets an intelligent brain using advanced Vision Language Models (VLM) and Large Language Models (LLM) for automated inspection and monitoring.</p>
+            <p>Creating autonomous insights, predictive maintenance alerts, and continuous infrastructure optimization feedback loops.</p>
           </div>
 
           {/* Digital Twin Process */}
@@ -267,10 +267,10 @@ const Homepage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { number: 85, suffix: '%', label: 'Faster Planning' },
-              { number: 40, suffix: '%', label: 'Lower Costs' },
-              { number: 70, suffix: '%', label: 'Time Saved in Inspections' },
-              { number: 95, suffix: '%', label: 'Accuracy in Defect Detection' }
+              { number: 85, suffix: '%', label: 'Faster Construction Planning' },
+              { number: 40, suffix: '%', label: 'Lower Infrastructure Costs' },
+              { number: 70, suffix: '%', label: 'Time Saved in AI Inspections' },
+              { number: 95, suffix: '%', label: 'Accuracy in Automated Defect Detection' }
             ].map((metric, idx) => (
               <div key={idx} className="p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20">
                 <div className="text-4xl md:text-5xl font-bold text-[#F67B27] mb-2">

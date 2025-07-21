@@ -1,0 +1,35 @@
+{
+  "name": "Yugmi - Digital Twin Technology for Infrastructure",
+  "short_name": "Yugmi",
+  "description": "AI-powered digital twin technology for construction monitoring, infrastructure inspection, and predictive maintenance",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F0F0F",
+  "theme_color": "#6F2B7F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/yugmi.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/yugmi.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["technology", "infrastructure", "ai", "construction"],
+  "keywords": [
+    "digital twin",
+    "construction monitoring",
+    "AI inspection",
+    "infrastructure technology",
+    "predictive maintenance",
+    "smart cities",
+    "bridge monitoring",
+    "industrial IoT"
+  ]
+}

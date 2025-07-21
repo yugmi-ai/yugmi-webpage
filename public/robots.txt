@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Allow all crawlers access to CSS and JS files
+Allow: /static/
+Allow: /_next/static/
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://yugmi.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to admin areas (if any in future)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# Allow important pages for SEO
+Allow: /
+Allow: /products
+Allow: /applications
+Allow: /about
+Allow: /contact

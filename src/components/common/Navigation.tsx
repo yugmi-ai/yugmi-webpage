@@ -30,7 +30,7 @@ const Navigation = () => {
               alt="Yugmi Logo"
               className="w-10 h-10 object-contain"
             />
-            <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">
               Yugmi
             </div>
           </Link>
@@ -41,7 +41,7 @@ const Navigation = () => {
                 key={item.id}
                 to={item.id}
                 className={`text-sm font-medium transition-colors ${isActive(item.id)
-                  ? 'text-[#F67B27]'
+                  ? 'text-white'
                   : 'text-gray-300 hover:text-white'
                   }`}
               >
@@ -50,7 +50,7 @@ const Navigation = () => {
             ))}
             <Link 
               to="/contact"
-              className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-all"
+              className="bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-all"
             >
               Schedule Demo
             </Link>
@@ -74,7 +74,7 @@ const Navigation = () => {
                 to={item.id}
                 onClick={() => setIsMenuOpen(false)}
                 className={`block w-full text-left py-2 text-sm font-medium transition-colors ${isActive(item.id)
-                  ? 'text-[#F67B27]'
+                  ? 'text-white'
                   : 'text-gray-300 hover:text-white'
                   }`}
               >
@@ -84,7 +84,7 @@ const Navigation = () => {
             <Link 
               to="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="block w-full bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-all mt-2 text-center"
+              className="block w-full bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-all mt-2 text-center"
             >
               Schedule Demo
             </Link>

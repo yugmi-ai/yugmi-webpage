@@ -8,7 +8,7 @@ const AboutPage = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               About{' '}
-              <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
+              <span className="text-gray-300">
                 Yugmi
               </span>
             </h1>
@@ -58,8 +58,8 @@ const AboutPage = () => {
                   desc: 'We continuously push the boundaries of what\'s possible'
                 }
               ].map((value, idx) => (
-                <div key={idx} className="text-center p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20">
-                  <h3 className="text-xl font-bold text-[#F67B27] mb-4">{value.title}</h3>
+                <div key={idx} className="text-center p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-700">
+                  <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
                   <p className="text-gray-300">{value.desc}</p>
                 </div>
               ))}
@@ -68,15 +68,15 @@ const AboutPage = () => {
 
           {/* Future Sections Placeholder */}
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="p-8 rounded-xl bg-gray-900/30 border border-[#6F2B7F]/20">
+            <div className="p-8 rounded-xl bg-gray-900/30 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4">Leadership</h3>
               <p className="text-gray-400">Coming Soon</p>
             </div>
-            <div className="p-8 rounded-xl bg-gray-900/30 border border-[#6F2B7F]/20">
+            <div className="p-8 rounded-xl bg-gray-900/30 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4">Partners</h3>
               <p className="text-gray-400">Coming Soon</p>
             </div>
-            <div className="p-8 rounded-xl bg-gray-900/30 border border-[#6F2B7F]/20">
+            <div className="p-8 rounded-xl bg-gray-900/30 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4">Awards</h3>
               <p className="text-gray-400">Coming Soon</p>
             </div>

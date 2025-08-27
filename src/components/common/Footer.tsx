@@ -14,6 +14,7 @@ const Footer = () => {
                 className="w-10 h-10 object-contain"
               />
               <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+              <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">
                 Yugmi
               </div>
             </Link>
@@ -25,27 +26,27 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Products</h4>
             <div className="space-y-2 text-gray-400">
-              <Link to="/products" className="block hover:text-[#F67B27] transition-colors">Yugmi.ai</Link>
-              <Link to="/products" className="block hover:text-[#F67B27] transition-colors">Yugmi Sense</Link>
-              <Link to="/products" className="block hover:text-[#F67B27] transition-colors">Yugmi XR</Link>
+              <Link to="/products" className="block hover:text-white transition-colors">Yugmi.ai</Link>
+              <Link to="/products" className="block hover:text-white transition-colors">Yugmi Sense</Link>
+              <Link to="/products" className="block hover:text-white transition-colors">Yugmi XR</Link>
             </div>
           </div>
 
           <div>
             <h4 className="font-semibold text-white mb-4">Applications</h4>
             <div className="space-y-2 text-gray-400">
-              <Link to="/applications" className="block hover:text-[#F67B27] transition-colors">Construction</Link>
-              <Link to="/applications" className="block hover:text-[#F67B27] transition-colors">Bridge & Infrastructure</Link>
-              <Link to="/applications" className="block hover:text-[#F67B27] transition-colors">Energy</Link>
-              <Link to="/applications" className="block hover:text-[#F67B27] transition-colors">Smart Cities</Link>
+              <Link to="/applications" className="block hover:text-white transition-colors">Construction</Link>
+              <Link to="/applications" className="block hover:text-white transition-colors">Bridge & Infrastructure</Link>
+              <Link to="/applications" className="block hover:text-white transition-colors">Energy</Link>
+              <Link to="/applications" className="block hover:text-white transition-colors">Smart Cities</Link>
             </div>
           </div>
 
           <div>
             <h4 className="font-semibold text-white mb-4">Company</h4>
             <div className="space-y-2 text-gray-400">
-              <Link to="/about" className="block hover:text-[#F67B27] transition-colors">About Us</Link>
-              <Link to="/contact" className="block hover:text-[#F67B27] transition-colors">Contact</Link>
+              <Link to="/about" className="block hover:text-white transition-colors">About Us</Link>
+              <Link to="/contact" className="block hover:text-white transition-colors">Contact</Link>
               <div className="text-gray-400">Careers</div>
               <div className="text-gray-400">Blog</div>
             </div>

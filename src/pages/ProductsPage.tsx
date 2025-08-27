@@ -63,8 +63,8 @@ const ProductsPage = () => {
                 key={key}
                 onClick={() => setSelectedProduct(key)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all ${selectedProduct === key
-                  ? 'bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white'
-                  : 'bg-gray-900/50 text-gray-300 hover:text-white border border-[#6F2B7F]/20'
+                  ? 'bg-white text-black'
+                  : 'bg-gray-900/50 text-gray-300 hover:text-white border border-gray-700'
                   }`}
               >
                 {product.title}
@@ -83,6 +83,7 @@ const ProductsPage = () => {
               {currentProduct.title}
             </h1>
             <h2 className="text-2xl text-[#C93A60] font-semibold mb-6">
+            <h2 className="text-2xl text-gray-300 font-semibold mb-6">
               {currentProduct.subtitle}
             </h2>
             <p className="text-3xl text-gray-300 mb-8">{currentProduct.tagline}</p>
@@ -94,8 +95,8 @@ const ProductsPage = () => {
             <h3 className="text-3xl font-bold text-white text-center mb-12">Key Features</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {currentProduct.features.map((feature, idx) => (
-                <div key={idx} className="p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20 hover:border-[#C93A60]/40 transition-all">
-                  <div className="text-[#F67B27] mb-4">{feature.icon}</div>
+                <div key={idx} className="p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-700 hover:border-gray-500 transition-all">
+                  <div className="text-white mb-4">{feature.icon}</div>
                   <h4 className="text-white font-semibold mb-2">{feature.title}</h4>
                   <p className="text-gray-300 text-sm">{feature.desc}</p>
                 </div>
@@ -110,7 +111,7 @@ const ProductsPage = () => {
               <div className="space-y-4">
                 {currentProduct.useCases.map((useCase, idx) => (
                   <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-900/30">
-                    <div className="w-2 h-2 bg-[#C93A60] rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     <span className="text-gray-300">{useCase}</span>
                   </div>
                 ))}
@@ -121,7 +122,7 @@ const ProductsPage = () => {
               <div className="space-y-4">
                 {currentProduct.benefits.map((benefit, idx) => (
                   <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-900/30">
-                    <div className="w-2 h-2 bg-[#F67B27] rounded-full"></div>
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -133,13 +134,13 @@ const ProductsPage = () => {
           <div className="text-center mt-16">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all mr-4"
+              className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-200 transition-all mr-4"
             >
               Book Demo
             </Link>
             <Link 
               to="/contact"
-              className="border border-[#C93A60] text-[#F67B27] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#C93A60]/10 transition-all"
+              className="border border-gray-400 text-gray-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all"
             >
               Try the App
             </Link>

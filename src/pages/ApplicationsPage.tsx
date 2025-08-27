@@ -87,7 +87,7 @@ const ApplicationsPage = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Industry{' '}
-              <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
+              <span className="text-gray-300">
                 Applications
               </span>
             </h1>
@@ -103,8 +103,8 @@ const ApplicationsPage = () => {
                 key={key}
                 onClick={() => setSelectedIndustry(key)}
                 className={`p-4 rounded-xl font-semibold transition-all text-center ${selectedIndustry === key
-                  ? 'bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white scale-105'
-                  : 'bg-gray-900/50 text-gray-300 hover:text-white border border-[#6F2B7F]/20 hover:border-[#C93A60]/40'
+                  ? 'bg-white text-black scale-105'
+                  : 'bg-gray-900/50 text-gray-300 hover:text-white border border-gray-700 hover:border-gray-500'
                   }`}
               >
                 <div className="flex justify-center mb-2">
@@ -116,9 +116,9 @@ const ApplicationsPage = () => {
           </div>
 
           {/* Selected Industry Details */}
-          <div className="bg-gray-900/30 backdrop-blur-sm rounded-2xl p-8 border border-[#6F2B7F]/20">
+          <div className="bg-gray-900/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
             <div className="flex items-center gap-4 mb-6">
-              <div className="text-[#F67B27]">
+              <div className="text-white">
                 {industries[selectedIndustry as keyof typeof industries].icon}
               </div>
               <h2 className="text-3xl font-bold text-white">
@@ -136,7 +136,7 @@ const ApplicationsPage = () => {
                 <div className="space-y-3">
                   {industries[selectedIndustry as keyof typeof industries].applications.map((app, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-[#C93A60] rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-300">{app}</span>
                     </div>
                   ))}
@@ -148,7 +148,7 @@ const ApplicationsPage = () => {
                 <div className="space-y-3">
                   {industries[selectedIndustry as keyof typeof industries].benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50">
-                      <div className="w-2 h-2 bg-[#F67B27] rounded-full"></div>
+                      <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
                       <span className="text-gray-300 font-medium">{benefit}</span>
                     </div>
                   ))}
@@ -159,7 +159,7 @@ const ApplicationsPage = () => {
             <div className="mt-8 text-center">
               <Link 
                 to="/contact"
-                className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-all"
+                className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all"
               >
                 Explore Solutions for {industries[selectedIndustry as keyof typeof industries].title}
               </Link>

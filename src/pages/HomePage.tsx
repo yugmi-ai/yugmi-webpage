@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" itemProp="headline">
             Living Digital Twins for{' '}
-            <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
+            <span className="text-gray-300">
               Smarter Infrastructure
             </span>
           </h1>
@@ -20,13 +20,13 @@ const HomePage = () => {
             AI-powered digital twin technology for construction monitoring, infrastructure inspection, and predictive maintenance using advanced LLM and VLM AI agents
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 group">
+            <button className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-200 transition-all flex items-center justify-center gap-2 group">
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Watch Demo
             </button>
             <Link
               to="/contact"
-              className="border border-[#C93A60] text-[#F67B27] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#C93A60]/10 transition-all flex items-center justify-center gap-2"
+              className="border border-gray-400 text-gray-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all flex items-center justify-center gap-2"
             >
               <Calendar className="w-5 h-5" />
               Schedule a Call
@@ -46,7 +46,7 @@ const HomePage = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16" itemProp="headline">
             Why Infrastructure Needs to{' '}
-            <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
+            <span className="text-gray-300">
               Evolve
             </span>
           </h2>
@@ -57,8 +57,8 @@ const HomePage = () => {
               { stat: 'Zero', desc: 'Memory in disconnected inspection systems' },
               { stat: 'Rising', desc: 'Safety risks from manual monitoring blind spots' }
             ].map((item, idx) => (
-              <div key={idx} className="text-center p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20 hover:border-[#C93A60]/40 transition-all">
-                <div className="text-3xl font-bold text-[#F67B27] mb-2">{item.stat}</div>
+              <div key={idx} className="text-center p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-700 hover:border-gray-500 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">{item.stat}</div>
                 <div className="text-gray-300">{item.desc}</div>
               </div>
             ))}
@@ -71,26 +71,26 @@ const HomePage = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16" itemProp="headline">
             The Yugmi Product{' '}
-            <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
+            <span className="text-gray-300">
               Ecosystem
             </span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Brain className="w-12 h-12 text-[#6F2B7F]" />,
+                icon: <Brain className="w-12 h-12 text-white" />,
                 title: 'Yugmi.ai',
                 subtitle: 'LLM & VLM AI Agent Framework',
                 desc: 'Advanced AI agents using Large Language Models and Vision Language Models for intelligent infrastructure analysis and predictive maintenance'
               },
               {
-                icon: <Smartphone className="w-12 h-12 text-[#E55C3B]" />,
+                icon: <Smartphone className="w-12 h-12 text-gray-300" />,
                 title: 'Yugmi Sense',
                 subtitle: 'Mobile Construction Monitoring',
                 desc: 'Real-time construction progress monitoring and automated defect detection with AR-enhanced field inspection tools'
               },
               {
-                icon: <Layers className="w-12 h-12 text-[#F67B27]" />,
+                icon: <Layers className="w-12 h-12 text-gray-400" />,
                 title: 'Yugmi XR',
                 subtitle: 'Digital Twin Visualization',
                 desc: 'Immersive AR/VR digital twin experiences for infrastructure visualization, remote inspection, and collaborative planning'
@@ -99,13 +99,13 @@ const HomePage = () => {
               <Link
                 key={idx}
                 to="/products"
-                className="group p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20 hover:border-[#C93A60]/40 transition-all cursor-pointer hover:scale-105"
+                className="group p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-700 hover:border-gray-500 transition-all cursor-pointer hover:scale-105"
               >
                 <div className="mb-6">{product.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-2">{product.title}</h3>
-                <h4 className="text-[#F67B27] font-semibold mb-4">{product.subtitle}</h4>
+                <h4 className="text-gray-300 font-semibold mb-4">{product.subtitle}</h4>
                 <p className="text-gray-300 mb-6">{product.desc}</p>
-                <div className="flex items-center text-[#C93A60] font-semibold group-hover:text-[#F67B27] transition-colors">
+                <div className="flex items-center text-gray-400 font-semibold group-hover:text-white transition-colors">
                   Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
@@ -119,7 +119,7 @@ const HomePage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8" itemProp="headline">
             A Brain for Every{' '}
-            <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
+            <span className="text-gray-300">
               Infrastructure
             </span>
           </h2>
@@ -138,7 +138,7 @@ const HomePage = () => {
               { step: '04', title: 'Action', desc: 'Automated Responses' }
             ].map((item, idx) => (
               <div key={idx} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
+                <div className="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
                   {item.step}
                 </div>
                 <h4 className="text-white font-semibold mb-2">{item.title}</h4>
@@ -159,8 +159,8 @@ const HomePage = () => {
               { number: 70, suffix: '%', label: 'Time Saved in AI Inspections' },
               { number: 95, suffix: '%', label: 'Accuracy in Automated Defect Detection' }
             ].map((metric, idx) => (
-              <div key={idx} className="p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-[#6F2B7F]/20">
-                <div className="text-4xl md:text-5xl font-bold text-[#F67B27] mb-2">
+              <div key={idx} className="p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-700">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                   +<AnimatedCounter end={metric.number} suffix={metric.suffix} />
                 </div>
                 <div className="text-gray-300 font-semibold">{metric.label}</div>
@@ -175,7 +175,7 @@ const HomePage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Let's Build the{' '}
-            <span className="bg-gradient-to-r from-[#C93A60] via-[#E55C3B] to-[#F67B27] bg-clip-text text-transparent">
+            <span className="text-gray-300">
               Twin Future
             </span>{' '}
             Together
@@ -185,7 +185,7 @@ const HomePage = () => {
               href="https://calendly.com/yugmi-ai/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-[#6F2B7F] via-[#C93A60] to-[#F67B27] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all"
+              className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-200 transition-all"
             >
               Talk to Experts
             </a>

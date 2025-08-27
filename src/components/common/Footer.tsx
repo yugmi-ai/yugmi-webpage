@@ -18,7 +18,6 @@ const Footer = () => {
               <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">
                 Yugmi
               </div>
-              </div>
             </Link>
             <p className="text-gray-400">
               Living digital twins for smarter infrastructure
@@ -64,5 +63,3 @@ const Footer = () => {
 };
 
 export default Footer;
-  )
-}

@@ -82,7 +82,6 @@ const ProductsPage = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
               {currentProduct.title}
             </h1>
-            <h2 className="text-2xl text-[#C93A60] font-semibold mb-6">
             <h2 className="text-2xl text-gray-300 font-semibold mb-6">
               {currentProduct.subtitle}
             </h2>

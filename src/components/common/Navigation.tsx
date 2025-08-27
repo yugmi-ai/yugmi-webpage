@@ -21,7 +21,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#0F0F0F]/90 backdrop-blur-md border-b border-[#6F2B7F]/20">
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
@@ -30,7 +30,7 @@ const Navigation = () => {
               alt="Yugmi Logo"
               className="w-10 h-10 object-contain"
             />
-            <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-black">
               Yugmi
             </div>
           </Link>
@@ -41,8 +41,8 @@ const Navigation = () => {
                 key={item.id}
                 to={item.id}
                 className={`text-sm font-medium transition-colors ${isActive(item.id)
-                  ? 'text-white'
-                  : 'text-gray-300 hover:text-white'
+                  ? 'text-black'
+                  : 'text-gray-600 hover:text-black'
                   }`}
               >
                 {item.label}
@@ -50,14 +50,14 @@ const Navigation = () => {
             ))}
             <Link 
               to="/contact"
-              className="bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-all"
+              className="bg-black text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-all"
             >
               Schedule Demo
             </Link>
           </div>
 
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-black"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X /> : <Menu />}
@@ -66,7 +66,7 @@ const Navigation = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-[#0F0F0F]/95 backdrop-blur-md border-t border-[#6F2B7F]/20">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
           <div className="px-4 py-2 space-y-2">
             {navItems.map((item) => (
               <Link
@@ -74,8 +74,8 @@ const Navigation = () => {
                 to={item.id}
                 onClick={() => setIsMenuOpen(false)}
                 className={`block w-full text-left py-2 text-sm font-medium transition-colors ${isActive(item.id)
-                  ? 'text-white'
-                  : 'text-gray-300 hover:text-white'
+                  ? 'text-black'
+                  : 'text-gray-600 hover:text-black'
                   }`}
               >
                 {item.label}
@@ -84,7 +84,7 @@ const Navigation = () => {
             <Link 
               to="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="block w-full bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-all mt-2 text-center"
+              className="block w-full bg-black text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-all mt-2 text-center"
             >
               Schedule Demo
             </Link>

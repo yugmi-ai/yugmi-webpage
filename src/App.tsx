@@ -12,7 +12,7 @@ import ContactPage from './pages/ContactPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#0F0F0F] text-white relative overflow-x-hidden">
+      <div className="min-h-screen bg-white text-black relative overflow-x-hidden">
         <FloatingStars />
         <Navigation />
         <main className="relative z-10">

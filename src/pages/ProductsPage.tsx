@@ -55,7 +55,7 @@ const ProductsPage = () => {
   return (
     <div className="pt-16 min-h-screen">
       {/* Product Navigation */}
-      <section className="py-8 px-4 border-b border-[#F67B27]/20">
+      <section className="py-8 px-4 border-b border-gray-200">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap gap-4 justify-center">
             {Object.entries(products).map(([key, product]) => (
@@ -63,8 +63,8 @@ const ProductsPage = () => {
                 key={key}
                 onClick={() => setSelectedProduct(key)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all ${selectedProduct === key
-                  ? 'bg-white text-black'
-                  : 'bg-gray-900/50 text-gray-300 hover:text-white border border-gray-700'
+                  ? 'bg-black text-white'
+                  : 'bg-gray-50 text-gray-600 hover:text-black border border-gray-200'
                   }`}
               >
                 {product.title}
@@ -79,25 +79,25 @@ const ProductsPage = () => {
         <div className="max-w-6xl mx-auto">
           {/* Hero */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-black mb-4">
               {currentProduct.title}
             </h1>
-            <h2 className="text-2xl text-gray-300 font-semibold mb-6">
+            <h2 className="text-2xl text-gray-600 font-semibold mb-6">
               {currentProduct.subtitle}
             </h2>
-            <p className="text-3xl text-gray-300 mb-8">{currentProduct.tagline}</p>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">{currentProduct.description}</p>
+            <p className="text-3xl text-gray-600 mb-8">{currentProduct.tagline}</p>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">{currentProduct.description}</p>
           </div>
 
           {/* Features */}
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-white text-center mb-12">Key Features</h3>
+            <h3 className="text-3xl font-bold text-black text-center mb-12">Key Features</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {currentProduct.features.map((feature, idx) => (
-                <div key={idx} className="p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-700 hover:border-gray-500 transition-all">
-                  <div className="text-white mb-4">{feature.icon}</div>
-                  <h4 className="text-white font-semibold mb-2">{feature.title}</h4>
-                  <p className="text-gray-300 text-sm">{feature.desc}</p>
+                <div key={idx} className="p-6 rounded-xl bg-gray-50 backdrop-blur-sm border border-gray-200 hover:border-gray-300 transition-all">
+                  <div className="text-black mb-4">{feature.icon}</div>
+                  <h4 className="text-black font-semibold mb-2">{feature.title}</h4>
+                  <p className="text-gray-600 text-sm">{feature.desc}</p>
                 </div>
               ))}
             </div>
@@ -106,23 +106,23 @@ const ProductsPage = () => {
           {/* Use Cases & Benefits */}
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Use Cases</h3>
+              <h3 className="text-2xl font-bold text-black mb-6">Use Cases</h3>
               <div className="space-y-4">
                 {currentProduct.useCases.map((useCase, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-900/30">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-gray-300">{useCase}</span>
+                  <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-100">
+                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <span className="text-gray-600">{useCase}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>
+              <h3 className="text-2xl font-bold text-black mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {currentProduct.benefits.map((benefit, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-900/30">
-                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-                    <span className="text-gray-300">{benefit}</span>
+                  <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-100">
+                    <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                    <span className="text-gray-600">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -133,13 +133,13 @@ const ProductsPage = () => {
           <div className="text-center mt-16">
             <Link
               to="/contact"
-              className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-200 transition-all mr-4"
+              className="bg-black text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all mr-4"
             >
               Book Demo
             </Link>
             <Link 
               to="/contact"
-              className="border border-gray-400 text-gray-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all"
+              className="border border-gray-400 text-gray-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all"
             >
               Try the App
             </Link>

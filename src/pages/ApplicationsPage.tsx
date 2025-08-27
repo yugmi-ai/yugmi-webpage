@@ -85,13 +85,13 @@ const ApplicationsPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-black mb-6">
               Industry{' '}
-              <span className="text-gray-300">
+              <span className="text-gray-600">
                 Applications
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover how Yugmi's digital twin technology transforms industries and creates smarter, more efficient infrastructure.
             </p>
           </div>
@@ -103,8 +103,8 @@ const ApplicationsPage = () => {
                 key={key}
                 onClick={() => setSelectedIndustry(key)}
                 className={`p-4 rounded-xl font-semibold transition-all text-center ${selectedIndustry === key
-                  ? 'bg-white text-black scale-105'
-                  : 'bg-gray-900/50 text-gray-300 hover:text-white border border-gray-700 hover:border-gray-500'
+                  ? 'bg-black text-white scale-105'
+                  : 'bg-gray-50 text-gray-600 hover:text-black border border-gray-200 hover:border-gray-300'
                   }`}
               >
                 <div className="flex justify-center mb-2">
@@ -116,40 +116,40 @@ const ApplicationsPage = () => {
           </div>
 
           {/* Selected Industry Details */}
-          <div className="bg-gray-900/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+          <div className="bg-gray-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-200">
             <div className="flex items-center gap-4 mb-6">
-              <div className="text-white">
+              <div className="text-black">
                 {industries[selectedIndustry as keyof typeof industries].icon}
               </div>
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-3xl font-bold text-black">
                 {industries[selectedIndustry as keyof typeof industries].title}
               </h2>
             </div>
 
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               {industries[selectedIndustry as keyof typeof industries].description}
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Key Applications</h3>
+                <h3 className="text-xl font-semibold text-black mb-4">Key Applications</h3>
                 <div className="space-y-3">
                   {industries[selectedIndustry as keyof typeof industries].applications.map((app, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">{app}</span>
+                      <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">{app}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Impact & Benefits</h3>
+                <h3 className="text-xl font-semibold text-black mb-4">Impact & Benefits</h3>
                 <div className="space-y-3">
                   {industries[selectedIndustry as keyof typeof industries].benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50">
-                      <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-                      <span className="text-gray-300 font-medium">{benefit}</span>
+                    <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-gray-100">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                      <span className="text-gray-600 font-medium">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -159,7 +159,7 @@ const ApplicationsPage = () => {
             <div className="mt-8 text-center">
               <Link 
                 to="/contact"
-                className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all"
+                className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all"
               >
                 Explore Solutions for {industries[selectedIndustry as keyof typeof industries].title}
               </Link>

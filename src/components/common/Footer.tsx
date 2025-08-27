@@ -14,8 +14,10 @@ const Footer = () => {
                 className="w-10 h-10 object-contain"
               />
               <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+              </div>
               <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">
                 Yugmi
+              </div>
               </div>
             </Link>
             <p className="text-gray-400">
